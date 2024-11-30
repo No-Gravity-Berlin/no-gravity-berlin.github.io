@@ -25,7 +25,7 @@ jobs:
           extended: true
 
       - name: NPM Setup
-        uses: actions/setup-node@4
+        uses: actions/setup-node@v4
         with: 
           node-version: 22
 
@@ -36,10 +36,10 @@ jobs:
         run: hugo --minify
 
       - name: Deploy
-        uses: actions/upload-pages-artifact@3
+        uses: actions/upload-pages-artifact@v3
         with:
           path: public/
 
       - name: Publish
-        uses: actions/deploy-pages@4
+        uses: actions/deploy-pages@v4
         
